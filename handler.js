@@ -184,7 +184,7 @@ module.exports = {
                     if (!('viewonce' in chat)) chat.viewonce = false
                     if (!('antiToxic' in chat)) chat.antiToxic = false
                 } else global.db.data.chats[m.chat] = {
-                    isBanned: false,
+                    isBanned: true,
                     welcome: true,
                     detect: false,
                     sWelcome: '',
@@ -192,10 +192,10 @@ module.exports = {
                     sPromote: '',
                     sDemote: '',
                     delete: false,
-                    antiLink: false,
+                    antiLink: true,
                     simi: false,
                     viewonce: false,
-                    antiToxic: false,
+                    antiToxic: true,
                 }
                 
         let settings = global.db.data.settings
@@ -215,11 +215,11 @@ module.exports = {
           anon: true,
           anticall: true,
           antispam: true,
-          antitroli: true,
+          antitroli: false,
           backup: false,
           backupDB: 0,
           groupOnly: false,
-          jadibot: false,
+          jadibot: true,
           nsfw: false,
           status: 0,
         }                
